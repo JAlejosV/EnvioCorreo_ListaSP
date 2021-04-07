@@ -16,7 +16,6 @@ namespace EnvioCorreo_ListaSP
     {
         public void EROfisisPendientes()
         {
-            //Cambio se sube a GitHub
             InterfacesDBContext InterfacesDB = new InterfacesDBContext();
             try
             {
@@ -38,7 +37,7 @@ namespace EnvioCorreo_ListaSP
                 //Fin Crear archivo excel
 
                 Correo correo = new Correo();
-                
+
                 correo.Adjuntos.Add(new Adjunto
                 {
                     archivo = archivoExcel,
@@ -51,7 +50,7 @@ namespace EnvioCorreo_ListaSP
                     string cuerpo = "Existen Entregas a Rendir Pendientes, se adjunta Excel.";
 
                     Helpers.Helper.ConstruirCorreoError(correo, cuerpo);
-                    Helpers.Helper.EnviarCorreoElectronico(correo, true);                    
+                    Helpers.Helper.EnviarCorreoElectronico(correo, true);
                 }
                 catch (Exception ex)
                 {
