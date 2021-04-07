@@ -16,6 +16,7 @@ namespace EnvioCorreo_ListaSP
     {
         public void EROfisisPendientes()
         {
+            //Cambio se sube a GitHub
             InterfacesDBContext InterfacesDB = new InterfacesDBContext();
             try
             {
